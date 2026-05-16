@@ -325,13 +325,85 @@ footer{background:#071F16;padding:48px 5% 24px}
 
 <!-- HERO -->
 <section class="hero" id="home">
+
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
+
   <div class="hero-inner">
+
     <div class="hero-left">
+
       <div class="hero-logo">
-        <img src="bainvolt-logo.png" alt="BainVolt — Powering Urban Mobility"/>
+        <img 
+          src="./bainvolt-logo.png"
+          alt="BainVolt — Powering Urban Mobility"
+          class="logo-img"
+        >
       </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:#ffffff;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+    z-index:1;
+}
+
+.hero-glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(0,180,120,0.08);
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:1;
+}
+
+.hero-inner{
+    position:relative;
+    z-index:5;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.hero-left{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-logo{
+    position:relative;
+    z-index:10;
+}
+
+.logo-img{
+    width:420px;
+    max-width:90vw;
+    height:auto;
+    display:block;
+}
+
+</style>
       <div class="hero-badge">⚡ A BAIN GROUP COMPANY · MINNA, NIGER STATE</div>
       <h1>Ride Clean.<br>Earn More.<br><span>Pay Less.</span></h1>
       <p>BainVolt provides commercial motorcycle riders in Minna with clean, affordable electric bikes — powered by instant battery swaps. No fuel. No waiting. No emissions.</p>
