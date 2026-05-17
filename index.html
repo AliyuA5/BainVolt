@@ -26,7 +26,8 @@ body{font-family:'Poppins',Arial,sans-serif;color:var(--text);background:var(--b
 .brand-font{font-family:'Bebas Neue',sans-serif;letter-spacing:2px}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:1000;padding:0 5%;transition:all 0.3s}
+html,body{width:100%;max-width:100vw;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;width:100%;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:1000;padding:0 5%;transition:all 0.3s}
 nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,0.08)}
 .nav-inner{display:flex;justify-content:space-between;align-items:center;height:64px;max-width:1100px;margin:0 auto}
 .nav-logo{text-decoration:none;display:flex;align-items:center}
@@ -39,8 +40,15 @@ nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,0.08)}
 .nav-right{display:flex;align-items:center;gap:10px}
 .nav-cta{background:var(--teal);color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;transition:all 0.2s;border:2px solid var(--teal)}
 .nav-cta:hover{background:transparent;color:var(--teal)}
-.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:6px 12px;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Poppins',Arial,sans-serif;white-space:nowrap}
+/* THEME DROPDOWN */
+.theme-wrap{position:relative}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:6px 14px;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Poppins',Arial,sans-serif;display:flex;align-items:center;gap:6px}
 .theme-btn:hover{border-color:var(--teal);color:var(--teal)}
+.theme-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--nav-bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.12);min-width:130px;z-index:9999}
+.theme-dropdown.open{display:block}
+.theme-option{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;transition:background 0.2s;border:none;background:none;width:100%;font-family:'Poppins',Arial,sans-serif;text-align:left}
+.theme-option:hover{background:var(--soft-teal);color:var(--teal)}
+.theme-option.active{color:var(--teal);font-weight:700}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block;transition:all 0.3s}
 .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--nav-bg);border-bottom:1px solid var(--border);padding:1.5rem 5%;z-index:999;flex-direction:column}
@@ -244,7 +252,7 @@ textarea.form-input{resize:vertical;min-height:120px}
 footer{background:#071F16;padding:48px 5% 24px}
 .footer-inner{max-width:1100px;margin:0 auto}
 .footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:40px}
-.footer-logo img{height:80px;width:auto;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:8px}
+.footer-logo img{height:80px;width:auto;object-fit:contain;margin-bottom:8px}
 .footer-tag{font-size:10px;color:#9FE1CB;letter-spacing:2px;margin-bottom:12px}
 .footer-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.7;max-width:240px}
 .footer-col h4{font-size:12px;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:16px}
@@ -304,8 +312,15 @@ footer{background:#071F16;padding:48px 5% 24px}
       <li><a href="#blog">News</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="nav-right">
-      <button class="theme-btn" id="themeBtn" onclick="cycleTheme()">🖥️ Auto</button>
+          <div class="nav-right">
+      <div class="theme-wrap">
+        <button class="theme-btn" id="themeBtn" onclick="toggleDropdown()">☾ <span id="themeLbl">Auto</span></button>
+        <div class="theme-dropdown" id="themeDropdown">
+          <button class="theme-option" onclick="setTheme('auto',0)">🖥️ Auto</button>
+          <button class="theme-option" onclick="setTheme('light',1)">☀️ Light</button>
+          <button class="theme-option" onclick="setTheme('dark',2)">🌙 Dark</button>
+        </div>
+      </div>
       <a href="#contact" class="nav-cta">Register as Rider</a>
       <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
@@ -322,14 +337,16 @@ footer{background:#071F16;padding:48px 5% 24px}
   <a href="#blog" onclick="toggleMenu()">News</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
 </div>
-!-- HERO -->
+
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-glow"></div>
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-logo">
-        <img src="bainvolt-logo.png" alt="BainVolt — Powering Urban Mobility"/></div>
+        <img src="bainvolt-logo.png" alt="BainVolt — Powering Urban Mobility" style="height:180px;width:auto;object-fit:contain"/>
+      </div>
       <div class="hero-badge">⚡ A BAIN GROUP COMPANY · MINNA, NIGER STATE</div>
       <h1>Ride Clean.<br>Earn More.<br><span>Pay Less.</span></h1>
       <p>BainVolt provides commercial motorcycle riders in Minna with clean, affordable electric bikes — powered by instant battery swaps. No fuel. No waiting. No emissions.</p>
@@ -535,7 +552,7 @@ footer{background:#071F16;padding:48px 5% 24px}
         <div style="font-size:20px;font-weight:900;color:#fff;margin-bottom:4px">Bala Aliyu Ibrahim</div>
         <div style="font-size:11px;color:#9FE1CB;letter-spacing:1px;margin-bottom:4px">FOUNDER & CEO · BAINVOLT</div>
         <div style="font-size:12px;color:#9FE1CB">Chemical Engineer · Minna, Niger State</div>
-        <img src="bainvolt-logo.png" alt="BainVolt" style="height:60px;width:auto;object-fit:contain;filter:brightness(0) invert(1);margin-top:24px"/>
+        <img src="bainvolt-logo.png" alt="BainVolt" style="height:60px;width:auto;object-fit:contain;margin-top:24px"/>
         <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:12px;letter-spacing:2px">A BAIN GROUP COMPANY</div>
       </div>
       <div class="fade-in-right">
