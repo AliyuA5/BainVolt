@@ -40,15 +40,9 @@ nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,0.08)}
 .nav-right{display:flex;align-items:center;gap:10px}
 .nav-cta{background:var(--teal);color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;transition:all 0.2s;border:2px solid var(--teal)}
 .nav-cta:hover{background:transparent;color:var(--teal)}
-/* THEME DROPDOWN */
-.theme-wrap{position:relative}
-.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:6px 14px;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Poppins',Arial,sans-serif;display:flex;align-items:center;gap:6px}
+/* THEME BUTTON */
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:6px 14px;color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Poppins',Arial,sans-serif}
 .theme-btn:hover{border-color:var(--teal);color:var(--teal)}
-.theme-dropdown{display:none;position:absolute;top:calc(100% + 8px);right:0;background:var(--nav-bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.12);min-width:130px;z-index:9999}
-.theme-dropdown.open{display:block}
-.theme-option{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;transition:background 0.2s;border:none;background:none;width:100%;font-family:'Poppins',Arial,sans-serif;text-align:left}
-.theme-option:hover{background:var(--soft-teal);color:var(--teal)}
-.theme-option.active{color:var(--teal);font-weight:700}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block;transition:all 0.3s}
 .mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--nav-bg);border-bottom:1px solid var(--border);padding:1.5rem 5%;z-index:999;flex-direction:column}
@@ -338,9 +332,10 @@ footer{background:#071F16;padding:48px 5% 24px}
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-logo">
-        <div style="background:rgba(255,255,255,0.95);border-radius:12px;padding:12px 20px;display:inline-block">
-          <img src="bainvolt-logo.png" alt="BainVolt — Powering Urban Mobility" style="height:140px;width:auto;object-fit:contain;display:block"/>
+        <div style="line-height:1">
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:#fff;letter-spacing:4px">BAIN</span><span style="font-family:'Bebas Neue',sans-serif;font-size:80px;color:#F5A623;letter-spacing:4px">VOLT</span>
         </div>
+        <div style="font-size:12px;letter-spacing:3px;color:#9FE1CB;margin-top:4px">POWERING URBAN MOBILITY</div>
       </div>
       <div class="hero-badge">⚡ A BAIN GROUP COMPANY · MINNA, NIGER STATE</div>
       <h1>Ride Clean.<br>Earn More.<br><span>Pay Less.</span></h1>
