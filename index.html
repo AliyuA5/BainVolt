@@ -313,14 +313,7 @@ footer{background:#071F16;padding:48px 5% 24px}
       <li><a href="#contact">Contact</a></li>
     </ul>
           <div class="nav-right">
-      <div class="theme-wrap">
-        <button class="theme-btn" id="themeBtn" onclick="toggleDropdown()">☾ <span id="themeLbl">Auto</span></button>
-        <div class="theme-dropdown" id="themeDropdown">
-          <button class="theme-option" onclick="setTheme('auto',0)">🖥️ Auto</button>
-          <button class="theme-option" onclick="setTheme('light',1)">☀️ Light</button>
-          <button class="theme-option" onclick="setTheme('dark',2)">🌙 Dark</button>
-        </div>
-      </div>
+      <button class="theme-btn" id="themeBtn">☾ Auto</button>
       <a href="#contact" class="nav-cta">Register as Rider</a>
       <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
@@ -345,7 +338,9 @@ footer{background:#071F16;padding:48px 5% 24px}
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-logo">
-        <img src="bainvolt-logo.png" alt="BainVolt — Powering Urban Mobility" style="height:180px;width:auto;object-fit:contain"/>
+        <div style="background:rgba(255,255,255,0.95);border-radius:12px;padding:12px 20px;display:inline-block">
+          <img src="bainvolt-logo.png" alt="BainVolt — Powering Urban Mobility" style="height:140px;width:auto;object-fit:contain;display:block"/>
+        </div>
       </div>
       <div class="hero-badge">⚡ A BAIN GROUP COMPANY · MINNA, NIGER STATE</div>
       <h1>Ride Clean.<br>Earn More.<br><span>Pay Less.</span></h1>
