@@ -101,11 +101,11 @@ section{padding:90px 5%}
 .divider.amber{background:var(--amber)}
 
 /* ANIMATIONS */
-.fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity 2s ease,transform 2s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
-.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity 2s ease,transform 2s ease}
 .fade-in-left.visible{opacity:1;transform:translateX(0)}
-.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity 2s ease,transform 2s ease}
 .fade-in-right.visible{opacity:1;transform:translateX(0)}
 
 /* WHY CARDS */
@@ -307,7 +307,7 @@ footer{background:#071F16;padding:48px 5% 24px}
       <li><a href="#contact">Contact</a></li>
     </ul>
           <div class="nav-right">
-      <button class="theme-btn" id="themeBtn">☾ Auto</button>
+      <button class="theme-btn" id="themeBtn" onclick="cycleTheme()">☾ Light</button>
       <a href="#contact" class="nav-cta">Register as Rider</a>
       <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
     </div>
