@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="About BainVolt — The story behind Minna's first clean electric motorcycle company. Meet the founder and the Bain Group team."/>
+<title>About — BainVolt</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--teal:#1D9E75;--dark-teal:#0F6E56;--amber:#F5A623;--charcoal:#1A1A1A;--soft-teal:#E1F5EE;--bg:#fff;--bg2:#f9f9f9;--text:#1A1A1A;--text2:#555;--text3:#666;--border:#eee;--nav-bg:rgba(255,255,255,0.97)}
+@media(prefers-color-scheme:dark){:root.auto{--bg:#0D1F18;--bg2:#112920;--text:#f0f0f0;--text2:#9FE1CB;--text3:#9FE1CB;--border:#1a3f30;--nav-bg:rgba(13,31,24,0.97);--soft-teal:#0a2a1e;--charcoal:#f0f0f0}}
+:root.dark{--bg:#0D1F18;--bg2:#112920;--text:#f0f0f0;--text2:#9FE1CB;--text3:#9FE1CB;--border:#1a3f30;--nav-bg:rgba(13,31,24,0.97);--soft-teal:#0a2a1e;--charcoal:#f0f0f0}
+:root.light{--bg:#fff;--bg2:#f9f9f9;--text:#1A1A1A;--text2:#555;--text3:#666;--border:#eee;--nav-bg:rgba(255,255,255,0.97);--soft-teal:#E1F5EE;--charcoal:#1A1A1A}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',Arial,sans-serif;color:var(--text);background:var(--bg);overflow-x:hidden;transition:background 0.3s,color 0.3s}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:2px}
+html,body{width:100%;max-width:100vw;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;width:100%;background:var(--nav-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:1000;padding:0 5%;transition:all 0.3s}
+nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;height:64px;max-width:1100px;margin:0 auto}
+.nav-logo{text-decoration:none;display:flex;align-items:center}
+.nav-logo img{height:48px;width:auto;object-fit:contain}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text2);font-size:13px;font-weight:600;transition:color 0.2s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--teal);transition:width 0.2s}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a:hover::after{width:100%}
+.nav-links a.active{color:var(--teal)}
+.nav-links a.active::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-cta{background:var(--teal);color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;transition:all 0.2s;border:2px solid var(--teal)}
+.nav-cta:hover{background:transparent;color:var(--teal)}
+.theme-btn{background:none;border:1px solid var(--border);border-radius:20px;padding:6px 12px;color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:all 0.2s;font-family:'Poppins',Arial,sans-serif}
+.theme-btn:hover{border-color:var(--teal);color:var(--teal)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--nav-bg);border-bottom:1px solid var(--border);padding:1.5rem 5%;z-index:999;flex-direction:column}
+.mobile-menu a{text-decoration:none;color:var(--text2);font-size:15px;font-weight:600;padding:14px 0;border-bottom:1px solid var(--border);display:block}
+.mobile-menu.open{display:flex}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,#0A3D2E 0%,var(--dark-teal) 50%,#1A6B52 100%);padding:140px 5% 80px;position:relative;overflow:hidden}
+.page-hero-bg{position:absolute;top:0;left:0;right:0;bottom:0;opacity:0.04;background-image:radial-gradient(circle at 2px 2px,#fff 1px,transparent 0);background-size:40px 40px}
+.page-hero-glow{position:absolute;top:20%;right:5%;width:300px;height:300px;background:radial-gradient(circle,rgba(245,166,35,0.15) 0%,transparent 70%);border-radius:50%;animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:0.5}50%{transform:scale(1.1);opacity:1}}
+.page-hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.page-hero-label{font-size:11px;font-weight:700;letter-spacing:3px;color:#9FE1CB;margin-bottom:16px}
+.page-hero-title{font-size:56px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:20px}
+.page-hero-title span{color:var(--amber)}
+.page-hero-sub{font-size:18px;color:#9FE1CB;line-height:1.7;max-width:560px}
+
+/* SECTIONS */
+section{padding:90px 5%}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--teal);text-transform:uppercase;margin-bottom:12px}
+.section-title{font-size:36px;font-weight:900;color:var(--text);margin-bottom:16px;line-height:1.2}
+.section-sub{font-size:16px;color:var(--text2);line-height:1.7;max-width:580px;margin-bottom:48px}
+.divider{width:48px;height:4px;background:var(--teal);border-radius:2px;margin:14px 0 24px}
+.divider.amber{background:var(--amber)}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity 2s ease,transform 2s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity 2s ease,transform 2s ease}
+.fade-in-left.visible{opacity:1;transform:translateX(0)}
+.fade-in-right{opacity:0;transform:translateX(30px);transition:opacity 2s ease,transform 2s ease}
+.fade-in-right.visible{opacity:1;transform:translateX(0)}
+
+/* ORIGIN STORY */
+.origin{background:var(--bg)}
+.origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.origin-visual{background:linear-gradient(135deg,#0A3D2E,var(--dark-teal));border-radius:20px;padding:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:360px;position:relative;overflow:hidden;text-align:center}
+.origin-visual::before{content:'';position:absolute;bottom:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,0.04)}
+.origin-icon{font-size:64px;margin-bottom:20px}
+.origin-quote{font-size:18px;color:#fff;font-weight:700;line-height:1.5;font-style:italic}
+.origin-quote-author{font-size:12px;color:#9FE1CB;margin-top:12px;letter-spacing:1px}
+.origin-text p{font-size:15px;color:var(--text3);line-height:1.9;margin-bottom:16px}
+.origin-stat{display:flex;gap:10px;align-items:flex-start;margin-top:24px;background:var(--soft-teal);border-radius:10px;padding:16px}
+.origin-stat-icon{font-size:24px;flex-shrink:0}
+.origin-stat-text{font-size:13px;color:var(--text3);line-height:1.6}
+.origin-stat-text strong{color:var(--text);display:block;margin-bottom:2px}
+
+/* MISSION VISION */
+.mv-section{background:var(--bg2)}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.mv-card{border-radius:16px;padding:36px;position:relative;overflow:hidden}
+.mv-card.mission{background:linear-gradient(135deg,#0A3D2E,var(--dark-teal));color:#fff}
+.mv-card.vision{background:var(--bg);border:1px solid var(--border)}
+.mv-card-label{font-size:10px;font-weight:700;letter-spacing:3px;margin-bottom:12px}
+.mv-card.mission .mv-card-label{color:#9FE1CB}
+.mv-card.vision .mv-card-label{color:var(--teal)}
+.mv-card-title{font-size:24px;font-weight:900;margin-bottom:16px;line-height:1.2}
+.mv-card.mission .mv-card-title{color:#fff}
+.mv-card.vision .mv-card-title{color:var(--text)}
+.mv-card-text{font-size:14px;line-height:1.8}
+.mv-card.mission .mv-card-text{color:#9FE1CB}
+.mv-card.vision .mv-card-text{color:var(--text3)}
+.mv-icon{font-size:40px;margin-bottom:20px}
+
+/* FOUNDER */
+.founder-section{background:var(--bg)}
+.founder-grid{display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start}
+.founder-card{background:linear-gradient(135deg,#0A3D2E,var(--dark-teal));border-radius:20px;padding:36px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
+.founder-card::before{content:'';position:absolute;bottom:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,0.04)}
+.founder-photo{width:130px;height:130px;border-radius:50%;object-fit:cover;border:4px solid #9FE1CB;margin-bottom:20px}
+.founder-initials{width:130px;height:130px;border-radius:50%;background:rgba(255,255,255,0.15);display:none;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:#fff;margin-bottom:20px;border:4px solid #9FE1CB}
+.founder-name{font-size:20px;font-weight:900;color:#fff;margin-bottom:4px}
+.founder-role{font-size:11px;color:#9FE1CB;letter-spacing:1px;margin-bottom:4px}
+.founder-degree{font-size:12px;color:rgba(255,255,255,0.6);margin-bottom:20px}
+.founder-socials{display:flex;gap:10px;justify-content:center;margin-top:8px}
+.founder-social{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:background 0.2s}
+.founder-social:hover{background:rgba(255,255,255,0.2)}
+.founder-bio h3{font-size:26px;font-weight:900;color:var(--text);margin-bottom:8px}
+.founder-bio .divider{margin:12px 0 20px}
+.founder-bio p{font-size:15px;color:var(--text3);line-height:1.9;margin-bottom:16px}
+.founder-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.founder-tag{background:var(--soft-teal);color:var(--dark-teal);font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px}
+
+/* BAIN GROUP */
+.baingroup{background:var(--soft-teal)}
+.baingroup-inner{max-width:1100px;margin:0 auto}
+.baingroup-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.company-card{background:var(--bg);border-radius:16px;padding:28px;border:1px solid var(--border);transition:all 0.3s;text-decoration:none;display:block}
+.company-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.08)}
+.company-logo{font-size:36px;margin-bottom:14px}
+.company-name{font-size:20px;font-weight:900;color:var(--text);margin-bottom:4px}
+.company-tag{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--teal);margin-bottom:12px}
+.company-desc{font-size:13px;color:var(--text3);line-height:1.7}
+.company-link{font-size:12px;font-weight:700;color:var(--teal);margin-top:14px;display:inline-block}
+
+/* VALUES */
+.values-section{background:var(--bg)}
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.value-card{background:var(--bg2);border-radius:14px;padding:28px;border-bottom:4px solid var(--teal);transition:all 0.3s;text-align:center}
+.value-card:nth-child(even){border-bottom-color:var(--amber)}
+.value-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.08)}
+.value-icon{font-size:36px;margin-bottom:16px}
+.value-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:8px}
+.value-desc{font-size:13px;color:var(--text3);line-height:1.6}
+
+/* TEAM */
+.team-section{background:var(--bg2)}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.team-card{background:var(--bg);border-radius:16px;padding:28px;border:1px solid var(--border);text-align:center;transition:all 0.3s}
+.team-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.08)}
+.team-avatar{width:80px;height:80px;border-radius:50%;background:var(--soft-teal);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 16px}
+.team-name{font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px}
+.team-role{font-size:12px;font-weight:600;color:var(--teal);letter-spacing:1px;margin-bottom:8px}
+.team-desc{font-size:12px;color:var(--text3);line-height:1.6}
+.team-placeholder{border:2px dashed var(--border)}
+.team-placeholder .team-avatar{background:var(--bg2);color:var(--text3)}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,#0A3D2E,var(--dark-teal));padding:90px 5%;text-align:center}
+.cta-inner{max-width:700px;margin:0 auto}
+.cta-label{font-size:11px;font-weight:700;letter-spacing:3px;color:#9FE1CB;margin-bottom:16px}
+.cta-title{font-size:42px;font-weight:900;color:#fff;line-height:1.2;margin-bottom:16px}
+.cta-title span{color:var(--amber)}
+.cta-sub{font-size:16px;color:#9FE1CB;line-height:1.7;margin-bottom:36px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--amber);color:#fff;padding:15px 30px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;transition:all 0.2s;box-shadow:0 4px 15px rgba(245,166,35,0.4);display:inline-block}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(245,166,35,0.5)}
+.btn-secondary{background:transparent;color:#fff;padding:15px 30px;border-radius:10px;font-weight:700;font-size:14px;text-decoration:none;border:2px solid rgba(255,255,255,0.3);transition:all 0.2s}
+.btn-secondary:hover{background:rgba(255,255,255,0.1)}
+
+/* FOOTER */
+footer{background:#071F16;padding:48px 5% 24px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:40px}
+.footer-logo img{height:80px;width:auto;object-fit:contain;margin-bottom:8px}
+.footer-tag{font-size:10px;color:#9FE1CB;letter-spacing:2px;margin-bottom:12px}
+.footer-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.7;max-width:240px}
+.footer-col h4{font-size:12px;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:16px}
+.footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:13px;margin-bottom:10px;transition:color 0.2s}
+.footer-col a:hover{color:#fff}
+.footer-col .clink{color:var(--amber);font-weight:600}
+.footer-col .clink:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.3)}
+.back-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;background:var(--teal);border-radius:50%;display:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 15px rgba(29,158,117,0.4);transition:all 0.2s;z-index:999;border:none;color:#fff;font-size:18px}
+.back-top:hover{background:var(--dark-teal);transform:translateY(-2px)}
+.back-top.show{display:flex}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .page-hero-title{font-size:38px}
+  .origin-grid,.mv-grid,.founder-grid,.baingroup-grid,.about-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .section-title{font-size:28px}
+  .cta-title{font-size:30px}
+}
+@media(max-width:600px){
+  .page-hero-title{font-size:30px}
+  .values-grid,.team-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .footer-top{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="bainvolt-logo.png" alt="BainVolt Logo"/>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="riders.html">Riders</a></li>
+      <li><a href="fleet.html">Fleet</a></li>
+      <li><a href="investors.html">Investors</a></li>
+      <li><a href="blog.html">News</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" onclick="cycleTheme()">☾ Light</button>
+      <a href="riders.html" class="nav-cta">Register as Rider</a>
+      <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="riders.html" onclick="toggleMenu()">Riders</a>
+  <a href="fleet.html" onclick="toggleMenu()">Fleet</a>
+  <a href="investors.html" onclick="toggleMenu()">Investors</a>
+  <a href="blog.html" onclick="toggleMenu()">News</a>
+  <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <div class="page-hero-label fade-in">OUR STORY</div>
+    <div class="page-hero-title fade-in">Built from the<br>inside of the <span>problem.</span></div>
+    <p class="page-hero-sub fade-in">BainVolt didn't start in a boardroom or a startup incubator. It started on a commercial motorcycle ride through the streets of Minna.</p>
+  </div>
+</div>
+
+<!-- ORIGIN STORY -->
+<section class="origin">
+  <div class="section-inner">
+    <div class="origin-grid">
+      <div class="origin-visual fade-in-left">
+        <div class="origin-icon">🏍️</div>
+        <div class="origin-quote">"He was spending ₦11,000 on petrol that day — before earning a single naira."</div>
+        <div class="origin-quote-author">— The moment BainVolt was born</div>
+      </div>
+      <div class="origin-text fade-in-right">
+        <div class="section-label">How It Started</div>
+        <div class="section-title">One ride.<br>One conversation.</div>
+        <div class="divider"></div>
+        <p>Our founder had just visited a mentor running an electric motorcycle company in Minna — importing and selling private e-bikes to those who could afford them. It was an inspiring meeting. But on the way back, he hopped on a petrol okada.</p>
+        <p>At a fuel stop, the rider bought ₦1,000 worth of petrol to keep moving — and mentioned he had already spent ₦11,000 on fuel that day alone. Before serving a single customer. Before earning a single naira.</p>
+        <p>That number stopped everything. He had just left a conversation about electric mobility. He was sitting behind a man who had no access to it. The gap between those two realities became the question he couldn't stop thinking about.</p>
+        <p><strong style="color:var(--text)">Who was building electric mobility for the riders who needed it most? Nobody was. So he decided to.</strong></p>
+        <div class="origin-stat">
+          <div class="origin-stat-icon">💡</div>
+          <div class="origin-stat-text">
+            <strong>That was the birth of BainVolt</strong>
+            A Battery-as-a-Service electric motorcycle company built entirely around the financial reality of commercial riders in Minna, Niger State.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="mv-section">
+  <div class="section-inner">
+    <div class="section-label fade-in">What Drives Us</div>
+    <div class="section-title fade-in">Mission & Vision</div>
+    <div class="divider fade-in"></div>
+    <div class="mv-grid">
+      <div class="mv-card mission fade-in-left">
+        <div class="mv-icon">🎯</div>
+        <div class="mv-card-label">OUR MISSION</div>
+        <div class="mv-card-title">Clean electric mobility for commercial riders, built for African roads and priced for African pockets.</div>
+        <div class="mv-card-text">To eliminate fuel dependency for commercial riders by delivering reliable electric motorcycles that are accessible, affordable, and built for the realities of Nigerian roads.</div>
+      </div>
+      <div class="mv-card vision fade-in-right">
+        <div class="mv-icon">🌍</div>
+        <div class="mv-card-label">OUR VISION</div>
+        <div class="mv-card-title">To become Africa's defining electric mobility infrastructure for secondary cities.</div>
+        <div class="mv-card-text">Starting in Minna and expanding across Nigeria and West Africa — building the clean mobility infrastructure that powers cities, empowers riders, and proves that the energy transition works everywhere, not just in Lagos and Abuja.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder-section">
+  <div class="section-inner">
+    <div class="section-label fade-in">The Founder</div>
+    <div class="section-title fade-in">Meet Bala Aliyu Ibrahim</div>
+    <div class="divider fade-in"></div>
+    <div class="founder-grid">
+      <div class="founder-card fade-in-left">
+        <img src="bala aliyu.jpg" alt="Bala Aliyu Ibrahim" class="founder-photo" onerror="this.style.display='none';document.getElementById('fi').style.display='flex'"/>
+        <div id="fi" class="founder-initials">BAI</div>
+        <div class="founder-name">Bala Aliyu Ibrahim</div>
+        <div class="founder-role">FOUNDER & CEO</div>
+        <div class="founder-degree">Chemical Engineer · Minna, Niger State</div>
+        <img src="bainvolt-logo.png" alt="BainVolt" style="height:50px;width:auto;object-fit:contain;margin-top:16px"/>
+        <div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:8px;letter-spacing:2px">A BAIN GROUP COMPANY</div>
+      </div>
+      <div class="founder-bio fade-in-right">
+        <h3>Engineer. Founder. Problem Solver.</h3>
+        <div class="divider"></div>
+        <p>Bala Aliyu Ibrahim is a chemical engineer based in Minna, Niger State — the city where BainVolt was born and where it will first come to life. His engineering background gives him a technical understanding of the systems that power BainVolt: 72V battery architecture, solar-hybrid charging infrastructure, and the operational mechanics of a commercial electric fleet.</p>
+        <p>What makes Bala uniquely qualified is not just his engineering — it is his proximity to the problem. He lives in Minna. He sees the fuel queues. He understands the financial pressure commercial riders face every single day. BainVolt is not a solution he designed from the outside. It is one he built from within.</p>
+        <p>As founder of Bain Group, Bala is building a portfolio of practical, impactful businesses designed to serve underserved communities across Niger State — starting with agriculture through Bain-Agro, and now clean mobility through BainVolt.</p>
+        <div class="founder-tags">
+          <span class="founder-tag">Chemical Engineer</span>
+          <span class="founder-tag">Clean Energy</span>
+          <span class="founder-tag">Electric Mobility</span>
+          <span class="founder-tag">Minna, Niger State</span>
+          <span class="founder-tag">Bain Group Founder</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAIN GROUP -->
+<section class="baingroup">
+  <div class="baingroup-inner">
+    <div class="section-label fade-in">Our Family</div>
+    <div class="section-title fade-in">The Bain Group</div>
+    <div class="divider fade-in"></div>
+    <p class="fade-in" style="font-size:15px;color:var(--text3);line-height:1.7;max-width:580px;margin-bottom:0">Bain Group is a Nigerian holding company committed to building practical, impactful businesses for underserved communities across Niger State and beyond. BainVolt is one of two companies currently operating under the group.</p>
+    <div class="baingroup-grid">
+      <a href="index.html" class="company-card fade-in-left">
+        <div class="company-logo">⚡</div>
+        <div class="company-name">BainVolt</div>
+        <div class="company-tag">ELECTRIC MOBILITY · MINNA</div>
+        <div class="company-desc">Battery-as-a-Service electric motorcycle rentals for commercial riders. Clean, affordable, and built for Nigerian roads.</div>
+        <div class="company-link">Visit BainVolt →</div>
+      </a>
+      <a href="https://www.bainagro.com" target="_blank" class="company-card fade-in-right">
+        <div class="company-logo">🌱</div>
+        <div class="company-name">Bain-Agro</div>
+        <div class="company-tag">AGRITECH · NIGER STATE</div>
+        <div class="company-desc">An agritech-driven agricultural enterprise enabling individuals and organizations to invest in farmland through a transparent lease-funding system.</div>
+        <div class="company-link">Visit Bain-Agro →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="section-inner">
+    <div class="section-label fade-in">What We Stand For</div>
+    <div class="section-title fade-in">Our Values</div>
+    <div class="divider fade-in"></div>
+    <div class="values-grid">
+      <div class="value-card fade-in">
+        <div class="value-icon">🏍️</div>
+        <div class="value-title">Rider First</div>
+        <div class="value-desc">Every decision we make starts with what is best for the commercial rider — not what is easiest for us.</div>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">📍</div>
+        <div class="value-title">Built Local</div>
+        <div class="value-desc">Designed for Minna's roads, weather, and commercial riding culture by a founder who lives here every day.</div>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">☀️</div>
+        <div class="value-title">Clean Energy</div>
+        <div class="value-desc">Solar-powered stations, zero emissions per kilometre, and a commitment to a cleaner city for everyone.</div>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">🤝</div>
+        <div class="value-title">Transparent</div>
+        <div class="value-desc">One flat fee. No hidden costs. No surprises. Ever. Riders know exactly what they pay and what they get.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="section-inner">
+    <div class="section-label fade-in">The People</div>
+    <div class="section-title fade-in">Our Team</div>
+    <div class="divider fade-in"></div>
+    <p class="fade-in" style="font-size:15px;color:var(--text3);line-height:1.7;max-width:580px;margin-bottom:0">BainVolt is currently founder-led and actively building its core team ahead of launch. The following roles are being filled as part of our 18-month hiring plan.</p>
+    <div class="team-grid">
+      <div class="team-card fade-in-left">
+        <div class="team-avatar">👨‍💻</div>
+        <div class="team-name">Bala Aliyu Ibrahim</div>
+        <div class="team-role">FOUNDER & CEO</div>
+        <div class="team-desc">Chemical Engineer. Visionary behind BainVolt and the entire Bain Group portfolio.</div>
+      </div>
+      <div class="team-card team-placeholder fade-in">
+        <div class="team-avatar">🏍️</div>
+        <div class="team-name">Fleet Operations Manager</div>
+        <div class="team-role">COMING SOON</div>
+        <div class="team-desc">Responsible for daily bike deployment, rider relations, and fleet availability across all stations.</div>
+      </div>
+      <div class="team-card team-placeholder fade-in-right">
+        <div class="team-avatar">🔧</div>
+        <div class="team-name">EV Technician</div>
+        <div class="team-role">COMING SOON</div>
+        <div class="team-desc">Expert in 72V electric motorcycle systems — maintenance, diagnostics, and battery management.</div>
+      </div>
+      <div class="team-card team-placeholder fade-in-left">
+        <div class="team-avatar">💼</div>
+        <div class="team-name">Finance & Compliance Officer</div>
+        <div class="team-role">COMING SOON</div>
+        <div class="team-desc">Managing revenue reconciliation, regulatory filings, and financial reporting for Bain Group.</div>
+      </div>
+      <div class="team-card team-placeholder fade-in">
+        <div class="team-avatar">🤝</div>
+        <div class="team-name">Partnerships Lead</div>
+        <div class="team-role">COMING SOON</div>
+        <div class="team-desc">Building relationships with rider unions, logistics companies, and B2B fleet clients across Minna.</div>
+      </div>
+      <div class="team-card team-placeholder fade-in-right">
+        <div class="team-avatar">💻</div>
+        <div class="team-name">Software Developer</div>
+        <div class="team-role">COMING SOON</div>
+        <div class="team-desc">Building and maintaining BainVolt's fleet management dashboard and rider-facing digital tools.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-label fade-in">JOIN THE MOVEMENT</div>
+    <div class="cta-title fade-in">Ready to ride with <span>BainVolt?</span></div>
+    <div class="cta-sub fade-in">Whether you're a commercial rider looking to save money, an investor looking for impact, or a business needing a logistics fleet — BainVolt has something for you.</div>
+    <div class="cta-btns fade-in">
+      <a href="riders.html" class="btn-primary">Register as a Rider →</a>
+      <a href="index.html#contact" class="btn-secondary">Get In Touch</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="bainvolt-logo.png" alt="BainVolt"/>
+        <div class="footer-tag">POWERING URBAN MOBILITY</div>
+        <div class="footer-desc">Clean electric motorcycle rentals for commercial riders in Minna, Niger State. A Bain Group Company.</div>
+      </div>
+      <div class="footer-col">
+        <h4>NAVIGATE</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="riders.html">Riders</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="investors.html">Investors</a>
+        <a href="blog.html">News</a>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <a href="tel:+2349160338591" class="clink">📞 +234 916 033 8591</a>
+        <a href="mailto:hello@bainvolt.com" class="clink">📧 hello@bainvolt.com</a>
+        <a href="mailto:invest@bainvolt.com" class="clink">💼 invest@bainvolt.com</a>
+        <a href="https://www.bainvolt.com" target="_blank">🌐 www.bainvolt.com</a>
+        <a href="index.html#contact">📍 Minna, Niger State</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 BainVolt · A Bain Group Company · Minna, Niger State, Nigeria · All rights reserved</div>
+      <div class="footer-copy">Ride Clean. Earn More. Pay Less.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const themes=['light','dark','auto'];
+const themeLabels=['☾ Light','☾ Dark','☾ Auto'];
+let themeIndex=0;
+function cycleTheme(){
+  themeIndex=(themeIndex+1)%3;
+  document.documentElement.classList.remove('light','dark','auto');
+  document.documentElement.classList.add(themes[themeIndex]);
+  document.getElementById('themeBtn').textContent=themeLabels[themeIndex];
+  localStorage.setItem('bainvolt-theme',themeIndex);
+}
+const saved=localStorage.getItem('bainvolt-theme');
+if(saved!==null){
+  themeIndex=parseInt(saved);
+  document.documentElement.classList.remove('light','dark','auto');
+  document.documentElement.classList.add(themes[themeIndex]);
+  document.getElementById('themeBtn').textContent=themeLabels[themeIndex];
+} else {
+  document.documentElement.classList.add('light');
+}
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+window.addEventListener('scroll',()=>{
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20);
+  document.getElementById('backTop').classList.toggle('show',window.scrollY>400);
+});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.fade-in,.fade-in-left,.fade-in-right').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
